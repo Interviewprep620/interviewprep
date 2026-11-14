@@ -21,6 +21,19 @@ Open http://localhost:3000.
 - Progress/history page
 - Topic browser
 - Notes page with local persistence
+- Supabase email/password sign-up and sign-in
 - Responsive sidebar and mobile layout
 
-The app is intentionally self-contained: no API keys or external database are required to run the core experience.
+## Authentication setup
+
+Create a Supabase project, then add its project URL and anon/public key to
+`interviewprep-site/.env.local`:
+
+```env
+NEXT_PUBLIC_SUPABASE_URL=https://your-project.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-supabase-anon-key
+```
+
+In Supabase Authentication settings, enable email sign-ups and add
+`http://localhost:3000/auth/callback` to the allowed redirect URLs. Signed-out
+visitors are sent to `/login`; a successful sign-in opens the dashboard.

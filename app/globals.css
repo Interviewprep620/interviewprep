@@ -69,6 +69,49 @@ button { cursor:pointer; }
 @media (max-width: 1000px) { .sidebar{width:210px}.main{margin-left:210px;width:calc(100% - 210px)}.grid-4{grid-template-columns:repeat(2,1fr)}.two-col{grid-template-columns:1fr}.content{padding:22px}.option-grid{grid-template-columns:1fr} }
 @media (max-width: 700px) { .sidebar{position:static;width:100%;height:auto}.app-shell{display:block}.main{margin-left:0;width:100%}.nav-label,.tip,.sidebar-bottom{display:none}.sidebar{padding:12px}.brand{margin:2px 10px 12px}.nav-item{display:inline-flex;margin-right:5px}.topbar{display:none}.content{padding:18px}.grid-4,.grid-2{grid-template-columns:1fr}.hero{align-items:flex-start;flex-direction:column}.hero h1{font-size:25px} }
 
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 26px clamp(20px, 5vw, 72px) 20px;
+  background:
+    radial-gradient(ellipse at 50% 34%, rgba(108, 78, 223, .14), transparent 40%),
+    #070a13;
+}
+.auth-topbar { display:flex; align-items:center; justify-content:space-between; }
+.auth-brand { display:inline-flex; align-items:center; gap:10px; font-size:18px; font-weight:800; letter-spacing:-.4px; }
+.auth-brand-icon,.auth-mark { display:grid; place-items:center; color:#fff; background:linear-gradient(135deg,#7254ff,#a67cff); box-shadow:0 8px 28px rgba(124,92,255,.25); }
+.auth-brand-icon { width:32px; height:32px; border-radius:10px; }
+.auth-back-link { display:inline-flex; align-items:center; gap:8px; color:#9299b5; font-size:13px; }
+.auth-back-link:hover,.auth-switch a:hover { color:#c0b3ff; }
+.auth-card { width:min(100%, 440px); margin:auto; padding:38px; border:1px solid #252b45; border-radius:18px; background:linear-gradient(160deg,rgba(17,22,42,.98),rgba(10,14,27,.98)); box-shadow:0 28px 90px rgba(0,0,0,.32); }
+.auth-heading { text-align:center; }
+.auth-mark { width:42px; height:42px; margin:0 auto 18px; border-radius:13px; }
+.auth-eyebrow { margin:0 0 10px; color:#a895ff; font-size:10px; font-weight:800; letter-spacing:.14em; }
+.auth-heading h1 { margin:0; font-size:26px; letter-spacing:-.04em; }
+.auth-subtitle { margin:10px 0 28px; color:#9299b5; font-size:13px; line-height:1.55; }
+.auth-form { display:flex; flex-direction:column; gap:17px; }
+.auth-field { display:flex; flex-direction:column; gap:8px; }
+.auth-field label { color:#dbe0ef; font-size:12px; font-weight:700; }
+.auth-label-row { display:flex; align-items:center; justify-content:space-between; }
+.auth-hint { color:#747d98; font-size:11px; }
+.auth-field input { width:100%; min-height:44px; padding:0 13px; border:1px solid #2a3048; border-radius:9px; outline:none; background:#0a0e1b; color:#fff; font-size:13px; }
+.auth-field input::placeholder { color:#626b85; }
+.auth-field input:focus { border-color:#8066ff; box-shadow:0 0 0 3px #7b61ff22; }
+.auth-password-wrap { position:relative; }
+.auth-password-wrap input { padding-right:44px; }
+.auth-password-toggle { position:absolute; top:0; right:0; display:grid; width:42px; height:44px; place-items:center; border:0; background:transparent; color:#828ba5; }
+.auth-submit { min-height:46px; margin-top:3px; border:0; border-radius:9px; background:linear-gradient(135deg,#8568ff,#6845ed); box-shadow:0 10px 30px #714ef033; color:#fff; font-size:13px; font-weight:800; }
+.auth-submit:hover { filter:brightness(1.08); }
+.auth-submit:disabled { cursor:wait; filter:saturate(.6); opacity:.75; }
+.auth-status { margin:0; padding:11px 12px; border:1px solid #3b345f; border-radius:9px; background:#17142b; color:#c5bfff; font-size:12px; line-height:1.5; }
+.auth-status-error { border-color:#713b50; background:#291521; color:#ffb4c6; }
+.auth-status-success { border-color:#315f54; background:#11251f; color:#a5e5c7; }
+.auth-switch { margin:22px 0 0; color:#9299b5; text-align:center; font-size:12px; }
+.auth-switch a { color:#b5a4ff; font-weight:700; }
+.auth-preview-note { margin:22px 0 0; padding-top:16px; border-top:1px solid #222840; color:#707995; text-align:center; font-size:11px; line-height:1.5; }
+.auth-footer { color:#646d87; text-align:center; font-size:11px; }
+@media (max-width: 520px) { .auth-page { padding:18px 16px; } .auth-back-link { font-size:0; gap:0; } .auth-back-link svg { width:18px; height:18px; } .auth-card { padding:28px 22px; } .auth-heading h1 { font-size:23px; } }
 
 /* =========================================================
    INTERVIEWPREP PREMIUM DASHBOARD
